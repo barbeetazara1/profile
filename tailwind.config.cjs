@@ -6,7 +6,10 @@ module.exports = {
 		extend: {
 			fontFamily : {
 				sans : ['Poppins', defaultTheme.fontFamily.sans]
-			}
+			},
+			colors: {
+				'regal-blue': '#212A3E',
+			},
 		},
 	},
 	plugins: [],
