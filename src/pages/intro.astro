@@ -6,106 +6,214 @@ import Card from '../components/Card.astro';
 
 <Layout title="Baron Betazara">
 	<main>
-		<header>
-            <div class="text-white flex items-center justify-center sticky mt-12">
-                <h1 class="text-4xl mr-40">BARON</h1>
-                <button class="hamburger">
-                    <div class="bar"></div>
-                </button>
-            </div>
-        </header>
-        <nav class="mobile-nav">
-            <a href="#">About</a>
-            <a href="#">Portofolio</a>
-            <a href="#">Contact</a>
-            <p class="text-black text-xs flex items-center justify-center mt-40">© 2023 Baron Betazara.</p>
-        </nav>
 		<body>
-            <div class="mt-20 px-4">
-                <p class="text-white flex items-center justify-center">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
-            
+            <header>
+                <div class="navbar">
+                    <div class="logo"><a href="#" class="text-white">BARON</a></div>
+                    <ul class="links">
+                        <li><a href="#" class="text-white">About</a></li>
+                        <li><a href="#" class="text-white">Experience</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                    </ul>
+                    <a href="#" class="started_btn">Download CV</a>
+                    <div class="toggle_btn">
+                        <i class="fa-regular fa-bars text-white"></i>
+                    </div>
+                    <div class="dropdown_menu">
+                        <li><a href="#" class="text-white">About</a></li>
+                        <li><a href="#" class="text-white">Experience</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                        <li><a href="#" class="started_btn2">Download CV</a></li>
+                        <!-- <li><a href="#" class="started_btn">Download CV</a></li> -->
+                    </div>
+                </div>
+            </header>
+            <!-- <div class="bg1">
+                <div class="flex items-center justify-center">
+                    <img src="assets/me.jpg" alt="" class="rounded-[1000px] h-60 w-60  mt-10">
+                </div>
+                <div class="mt-4 px-4">
+                    <p class="text-black flex items-center justify-center">
+                        I'm Web Developer Based on Tangerang!
+                    </p>
+                </div>
+            </div> -->
+            <!-- <div class="bg2">
+            </div> -->
         </body>
 	</main>
-	<footer>
+	<!-- <footer>
 		<p class="text-white text-xs flex items-center justify-center mt-40">© 2023 Baron Betazara.</p>
-	</footer>
+	</footer> -->
     <style>
-        .hamburger{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            background-color:black;
+        }
+        li {
+            list-style:none;
+        }
+        /* a:hover{
+            color:red;
+        } */
+
+        /* Header */
+        header{
             position: relative;
-            display: block;
-            width : 35px;
-            height : 35px;
-            /* left:100px; */
-            bottom:2px;
-            cursor: pointer;
-            apperance: none;
-            background: none;
-            outline: none;
-            border: none;
+            padding: 0 2rem;
         }
-        .hamburger .bar, .hamburger:after, .hamburger:before{
-            content:'';
-            display: block;
-            width: 100%;
-            height: 5px;
-            background-color : #FFF;
-            margin: 6px 0px;
-            transition: 0.4s;
+        .navbar{
+            width:100%;
+            height:60px;
+            max-width:1200px;
+            margin:0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-
-        .hamburger.is-active:before{
-            transform: rotate(-45deg) translate(-8px, 6px);
+        .navbar .logo a{
+            font-size: 1.5rem;
+            font-weight:bold;
+            cursor: default;
+        }
+        .navbar .links {
+            display:flex;
+            gap: 2rem;
         }
 
-        .hamburger.is-active:after{
-            transform: rotate(45deg) translate(-9px, -8px);
+        .navbar .toggle_btn{
+            font-size:1.5rem;
+            cursor:pointer;
+            display:none;
+        }
+        .started_btn{
+            background-color: #FF007F;
+            color:#fff;
+            padding: 0.5rem 1rem;
+            border:none;
+            outline:none;
+            border-radius:20px;
+            font-size: 0.8rem;
+            font-weight:bold;
+            cursor:pointer;
+            transition: scale 0.2 ease;
+        }
+        .started_btn:hover{
+            scale:1.05;
+            color:#fff;
+        }
+        .started_btn:active{
+            scale:0.95;
+        }
+        .started_btn2{
+            background-color: #FF007F;
+            color:#fff;
+            padding: 0.5rem 1rem;
+            border:none;
+            outline:none;
+            border-radius:20px;
+            font-size: 0.8rem;
+            font-weight:bold;
+            cursor:pointer;
+            transition: scale 0.2 ease;
+        }
+        .started_btn2:hover{
+            scale:1.05;
+            color:#fff;
+        }
+        .started_btn2:active{
+            scale:0.95;
+        }
+        /* DropDown Menu */
+        .dropdown_menu{
+            /* display:none; */
+            position: absolute;
+            right:2rem;
+            top:60px;
+            width:300px;
+            height:0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter:blur(15px);
+            border-radius:10px;
+            overflow:hidden;
+            transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .dropdown_menu.open{
+            height:210px;
+        }
+        .dropdown_menu li{
+            padding: 0.7rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .dropdown_menu .started_btn2{
+            width:100%;
+            display:flex;
+            justify-content:center;
+        }
+        /* RESPONSIVE */
+        @media (max-width:992px){
+            .navbar .links,
+            .navbar .started_btn{
+                display:none;
+            }
+            .navbar .toggle_btn{
+                display:block;
+            }
+            .dropdown_menu{
+                display:block;
+            }
+        }
+        @media (max-width:576px){
+            .dropdown_menu{
+                left:2rem;
+                width:unset;
+            }
+        }
+        @media (min-width:992px){
+            .links a{
+                position:relative;
+            }
+            .links a:after{
+                content:"";
+                position:absolute;
+                background-color: white;
+                height:3px;
+                width:0;
+                left:0;
+                bottom:-10px;
+                transition: 0.3s;
+            }
+            .links a:hover:after{
+                width:100%;
+            }
         }
 
-        .hamburger.is-active .bar{
-            opacity: 0;
+        .bg1{
+            height : 500px;
+            widht : 100px;
+            background-color: white;
+            margin-top : 20px;
         }
-
-        .mobile-nav{
-            position: fixed;
-            top: 100px;
-            left: 100%;
-            width: 100%;
-            min-height: 100vh;
-            display: block;
-            z-index: 9; 
-            background-color : #DDE6ED;
-            padding-top: 120px;
-            transition : 0.4s;
-            /* opacity: 1; */
-        }
-        .mobile-nav.is-active{
-            left:0;
-            /* opacity: 1; */
-        }
-        .mobile-nav a{
-            display: block;
-            text-align: center;
-            max-width: 200px;
-            margin: 0 auto 16px;
-            width : 100%;
-            padding: 12px 16px;
+        .bg2{
+            height : 500px;
+            widht : 100px;
             background-color: black;
-            color: white;
-            /* font-weight: bold; */
         }
+
     </style>
     <script>
-        const menu_btn = document.querySelector('.hamburger');
-        const mobile_btn = document.querySelector('.mobile-nav');
+        const drop_down = document.querySelector('.dropdown_menu');
+        const toggle_btn = document.querySelector('.toggle_btn');
 
-        menu_btn.addEventListener('click', function () {
-            menu_btn.classList.toggle('is-active');
-            mobile_btn.classList.toggle('is-active');
+        toggle_btn.addEventListener('click', function () {
+            drop_down.classList.toggle('open');
         });
     </script>
 </Layout>
