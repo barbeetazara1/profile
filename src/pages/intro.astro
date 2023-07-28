@@ -24,27 +24,29 @@ import Card from '../components/Card.astro';
                         <li><a href="#" class="text-white">Experience</a></li>
                         <li><a href="#" class="text-white">Contact</a></li>
                         <li><a href="#" class="started_btn2">Download CV</a></li>
-                        <!-- <li><a href="#" class="started_btn">Download CV</a></li> -->
                     </div>
                 </div>
             </header>
-            <!-- <div class="bg1">
-                <div class="flex items-center justify-center">
-                    <img src="assets/me.jpg" alt="" class="rounded-[1000px] h-60 w-60  mt-10">
-                </div>
-                <div class="mt-4 px-4">
-                    <p class="text-black flex items-center justify-center">
-                        I'm Web Developer Based on Tangerang!
+            <div class="page1">
+                <div class="tittle">
+                    <p class="intro-nama text-white">
+                        Hey! I'm <br>Bonifasius Baron Betazara
                     </p>
+                    <!-- <a href="#" class="started_btn">Download CV</a> -->
                 </div>
-            </div> -->
-            <!-- <div class="bg2">
+            </div>
+            <div class="page2">
+                <img src="/assets/intro.jpg" alt="" class="gambar1">
+                <p class="text-white">I'm Web Developer <br> From Indonesia <br> Nice to meet you! </p>
+            </div>
+            <!-- <div class="page3">
+                
             </div> -->
         </body>
 	</main>
-	<!-- <footer>
+	<footer>
 		<p class="text-white text-xs flex items-center justify-center mt-40">© 2023 Baron Betazara.</p>
-	</footer> -->
+	</footer>
     <style>
         * {
             margin: 0;
@@ -53,20 +55,16 @@ import Card from '../components/Card.astro';
         }
         body {
             height: 100vh;
-            background-color:#152238;
+            background-color:black;
         }
         li {
             list-style:none;
         }
-        /* a:hover{
-            color:red;
-        } */
 
         /* Header */
         header{
             position: relative;
             padding: 0 2rem;
-            background-color:#23395d;
         }
         .navbar{
             width:100%;
@@ -131,6 +129,7 @@ import Card from '../components/Card.astro';
             scale:0.95;
         }
         /* DropDown Menu */
+        
         .dropdown_menu{
             /* display:none; */
             position: absolute;
@@ -158,6 +157,47 @@ import Card from '../components/Card.astro';
             display:flex;
             justify-content:center;
         }
+        .page1{
+            height : 500px;
+            widht : 100px;
+            background: url("https://wallpapers.com/images/hd/black-anime-aesthetic-pc-7kh8rwk2l89xcvcx.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .page2{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height: 300px;
+            width: 500px;
+            margin-left:620px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter:blur(15px);
+            border-radius:10px;
+            text-align:center;
+            gap:2rem;
+        }
+        .page2 .gambar1{
+            height : 280px;
+            border-radius:20px;
+        }
+        .page3{
+            height : 200px;
+            background-color:#040406;
+        }
+        
+        
+        .tittle{
+            position: relative;
+        }
+        .tittle p{
+            display:flex;
+            margin-top: 250px;
+            font-size:40px;
+            justify-content: center;
+            align-items:center;
+            text-align:center;
+        }
         /* RESPONSIVE */
         @media (max-width:992px){
             .navbar .links,
@@ -175,10 +215,24 @@ import Card from '../components/Card.astro';
             .dropdown_menu{
                 left:2rem;
                 width:unset;
+                background-color:black;
+                z-index:1;
             }
             .navbar .logo a{
             font-size: 1.5rem;
-        }
+            }
+            .tittle p{
+                margin-top:100px;
+            }
+            .page1{
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            }
+            .page2{
+                width: auto;
+                margin-left:auto;
+            }
         }
         @media (min-width:992px){
             .links a{
@@ -198,18 +252,14 @@ import Card from '../components/Card.astro';
                 width:100%;
             }
         }
+        @media (min-width:576px){
+            .page2{
+                width: auto;
+                margin-left:auto;
+            }
+        }
 
-        .bg1{
-            height : 500px;
-            widht : 100px;
-            background-color: white;
-            margin-top : 20px;
-        }
-        .bg2{
-            height : 500px;
-            widht : 100px;
-            background-color: black;
-        }
+        
 
     </style>
     <script>
