@@ -29,7 +29,7 @@ import Card from '../components/Card.astro';
             </header>
             <div class="page1">
                 <div class="tittle">
-                    <p class="intro-nama text-white">
+                    <p class="intro-nama">
                         Hey! I'm <br>Bonifasius Baron Betazara
                     </p>
                     <!-- <a href="#" class="started_btn">Download CV</a> -->
@@ -82,10 +82,14 @@ import Card from '../components/Card.astro';
             font-size: 2rem;
             font-weight:bold;
             cursor: default;
+            color: #f4d7d8;
         }
         .navbar .links {
             display:flex;
             gap: 2rem;
+        }
+        .navbar .links li a {
+            color: #f4d7d8;
         }
 
         .navbar .toggle_btn{
@@ -94,7 +98,7 @@ import Card from '../components/Card.astro';
             display:none;
         }
         .started_btn{
-            background-color: #FF007F;
+            background-color: #1A5B5A;
             color:#fff;
             padding: 0.5rem 1rem;
             border:none;
@@ -113,7 +117,7 @@ import Card from '../components/Card.astro';
             scale:0.95;
         }
         .started_btn2{
-            background-color: #FF007F;
+            background-color: #1A5B5A;
             color:#fff;
             padding: 0.5rem 1rem;
             border:none;
@@ -135,7 +139,7 @@ import Card from '../components/Card.astro';
             position:absolute;
             margin-top:20px;
             margin-left:-45px;
-            background-color: #FF007F;
+            background-color: #1A5B5A;
             color:#fff;
             padding: 0.5rem 1rem;
             border:none;
@@ -177,6 +181,9 @@ import Card from '../components/Card.astro';
             align-items:center;
             justify-content:center;
         }
+        .dropdown_menu li a{
+            color: #f4d7d8;
+        }
         .dropdown_menu .started_btn2{
             width:100%;
             display:flex;
@@ -185,9 +192,16 @@ import Card from '../components/Card.astro';
         .page1{
             height : 500px;
             widht : 100px;
-            background: url("https://wallpapers.com/images/hd/black-anime-aesthetic-pc-7kh8rwk2l89xcvcx.jpg");
+            background-color:#040101;
+            /* background: url("https://wallpapers.com/images/hd/black-anime-aesthetic-pc-7kh8rwk2l89xcvcx.jpg");
             background-size: cover;
-            background-position: center;
+            background-position: center; */
+        }
+        .page1 p{
+            color: #f4d7d8;
+        }
+        .page2 p{
+            color: #f4d7d8;
         }
         .page2{
             display:flex;
@@ -211,7 +225,7 @@ import Card from '../components/Card.astro';
         }
         .page3{
             height : 200px;
-            background-color:#040406;
+            background-color:#040101;
             display:flex;
             align-items:center;
             justify-content:center;
