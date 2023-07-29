@@ -37,16 +37,19 @@ import Card from '../components/Card.astro';
             </div>
             <div class="page2">
                 <img src="/assets/intro.jpg" alt="" class="gambar1">
-                <p class="text-white">I'm Web Developer <br> From Indonesia <br> Nice to meet you! </p>
+                <p class="text-white">I'm Web Developer <br> From Indonesia <br> Nice to meet you! <br> <a href="#" class="started_btn3">Download CV</a></p>
+                <!-- <p class="text-white">I'm Web Developer <p>From Indonesia</p> Nice to meet you! </p> -->
             </div>
-            <!-- <div class="page3">
-                
-            </div> -->
+            <div class="page3">
+                <img src="/assets/laravel.png" alt="" class="gambar1">
+                <img src="/assets/astro.png" alt="" class="gambar2">
+                <img src="/assets/odoo.png" alt="" class="gambar3">
+            </div>
         </body>
 	</main>
-	<footer>
+	<!-- <footer>
 		<p class="text-white text-xs flex items-center justify-center mt-40">© 2023 Baron Betazara.</p>
-	</footer>
+	</footer> -->
     <style>
         * {
             margin: 0;
@@ -128,6 +131,28 @@ import Card from '../components/Card.astro';
         .started_btn2:active{
             scale:0.95;
         }
+        .started_btn3{
+            position:absolute;
+            margin-top:20px;
+            margin-left:-45px;
+            background-color: #FF007F;
+            color:#fff;
+            padding: 0.5rem 1rem;
+            border:none;
+            outline:none;
+            border-radius:20px;
+            font-size: 0.8rem;
+            font-weight:bold;
+            cursor:pointer;
+            transition: scale 0.2 ease;
+        }
+        .started_btn3:hover{
+            scale:1.05;
+            color:#fff;
+        }
+        .started_btn3:active{
+            scale:0.95;
+        }
         /* DropDown Menu */
         
         .dropdown_menu{
@@ -181,9 +206,25 @@ import Card from '../components/Card.astro';
             height : 280px;
             border-radius:20px;
         }
+        .page2 p{
+            font-weight:bold;
+        }
         .page3{
             height : 200px;
             background-color:#040406;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:2rem;
+        }
+        .page3 .gambar1{
+            height : 40px;
+        }
+        .page3 .gambar2{
+            height : 30px;
+        }
+        .page3 .gambar3{
+            height : 20px;
         }
         
         
