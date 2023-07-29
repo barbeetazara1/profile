@@ -32,8 +32,8 @@ import Card from '../components/Card.astro';
                     <p class="intro-nama">
                         Hey! I'm <br>Bonifasius Baron Betazara
                     </p>
-                    <!-- <a href="#" class="started_btn">Download CV</a> -->
                 </div>
+                <a href="#" class="started_btn4">Contact Me</a>
             </div>
             <div class="page2">
                 <img src="/assets/intro.jpg" alt="" class="gambar1">
@@ -47,9 +47,9 @@ import Card from '../components/Card.astro';
             </div>
         </body>
 	</main>
-	<!-- <footer>
-		<p class="text-white text-xs flex items-center justify-center mt-40">© 2023 Baron Betazara.</p>
-	</footer> -->
+	<footer>
+		<!-- <p class="text-white text-xs flex items-center justify-center">© 2023 Baron Betazara.</p> -->
+	</footer>
     <style>
         * {
             margin: 0;
@@ -97,9 +97,10 @@ import Card from '../components/Card.astro';
             cursor:pointer;
             display:none;
         }
+        /* Button */
         .started_btn{
             background-color: #1A5B5A;
-            color:#fff;
+            color:#f4d7d8;
             padding: 0.5rem 1rem;
             border:none;
             outline:none;
@@ -118,7 +119,7 @@ import Card from '../components/Card.astro';
         }
         .started_btn2{
             background-color: #1A5B5A;
-            color:#fff;
+            color:#f4d7d8;
             padding: 0.5rem 1rem;
             border:none;
             outline:none;
@@ -140,7 +141,7 @@ import Card from '../components/Card.astro';
             margin-top:20px;
             margin-left:-45px;
             background-color: #1A5B5A;
-            color:#fff;
+            color:#f4d7d8;
             padding: 0.5rem 1rem;
             border:none;
             outline:none;
@@ -157,8 +158,35 @@ import Card from '../components/Card.astro';
         .started_btn3:active{
             scale:0.95;
         }
+        .started_btn4{
+            /* position:relative; */
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#f4d7d8;
+            padding: 0.5rem 1rem;
+            border:none;
+            outline:none;
+            border-radius:20px;
+            font-size: 0.8rem;
+            font-weight:bold;
+            cursor:pointer;
+            transition: scale 0.2 ease;
+            background: rgba(255,255,255,0.1);
+            width: 80px;
+        }
+        .started_btn4:hover{
+            scale:1.2;
+            color:#fff;
+        }
+        .started_btn4:active{
+            scale:0.7;
+        }
+        .started_btn4 a:hover:after{
+            width:100%;
+        }
+
         /* DropDown Menu */
-        
         .dropdown_menu{
             /* display:none; */
             position: absolute;
@@ -190,15 +218,18 @@ import Card from '../components/Card.astro';
             justify-content:center;
         }
         .page1{
-            height : 500px;
-            widht : 100px;
+            height : 300px;
+            width : 100%;
             background-color:#040101;
-            /* background: url("https://wallpapers.com/images/hd/black-anime-aesthetic-pc-7kh8rwk2l89xcvcx.jpg");
-            background-size: cover;
-            background-position: center; */
+            display:flex;
+            flex-direction:column;
+            gap: 2rem;
+            align-items:center;
+            justify-content:center;
         }
         .page1 p{
             color: #f4d7d8;
+            
         }
         .page2 p{
             color: #f4d7d8;
@@ -240,17 +271,8 @@ import Card from '../components/Card.astro';
         .page3 .gambar3{
             height : 20px;
         }
-        
-        
-        .tittle{
-            position: relative;
-        }
         .tittle p{
-            display:flex;
-            margin-top: 250px;
             font-size:40px;
-            justify-content: center;
-            align-items:center;
             text-align:center;
         }
         /* RESPONSIVE */
@@ -287,6 +309,10 @@ import Card from '../components/Card.astro';
             .page2{
                 width: auto;
                 margin-left:auto;
+                margin-top: 60px;
+            }
+            .started_btn4{
+                width: auto;
             }
         }
         @media (min-width:992px){
@@ -296,7 +322,7 @@ import Card from '../components/Card.astro';
             .links a:after{
                 content:"";
                 position:absolute;
-                background-color: white;
+                background-color: #f4d7d8;
                 height:3px;
                 width:0;
                 left:0;
